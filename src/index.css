@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-accent: #FACC15; /* yellow-400 */
+  --color-accent-hover: #EAB308; /* yellow-500 */
+  --color-neutral-border: #E5E7EB;
+  --font-sans: "Inter", sans-serif;
+}
+
+@layer base {
+  body {
+    background-color: #FAFAFA; /* very subtle off-white for contrast against pure white cards */
+    color: #0F172A; /* slate-900 */
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
