@@ -67,13 +67,6 @@ const Home = () => {
           <div className="order-2 lg:order-1 relative">
             {/* Image Composition mock */}
             <div className="bg-white aspect-[4/5] rounded-[2rem] border border-gray-200 shadow-xl flex items-center justify-center p-8 relative">
-              <div className="absolute top-8 -right-8 bg-white p-4 rounded-2xl shadow-lg border border-gray-100 flex items-center gap-4">
-                <div className="w-10 h-10 bg-accent rounded-full"></div>
-                <div>
-                  <p className="text-sm font-bold">Batas Utara</p>
-                  <p className="text-xs text-gray-500">Sei. Kuantan</p>
-                </div>
-              </div>
               <span className="text-gray-400 font-medium">[Gambar Geografis / Peta]</span>
             </div>
           </div>
