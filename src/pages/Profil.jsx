@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowDown, MapPin, Users, History, LayoutGrid, Goal, Shield, User, Award } from 'lucide-react';
+import balaiDesaImg from '../assets/bala-desa.webp';
 
 const leaders = [
   { name: 'Raja Lasmi', period: '1981 - 1989', status: '' },
@@ -59,11 +60,8 @@ const Profil = () => {
         </p>
 
         {/* Visual Placeholder */}
-        <div className="w-full max-w-5xl aspect-video bg-white rounded-[2rem] border border-gray-200 shadow-2xl shadow-gray-200/50 flex flex-col items-center justify-center overflow-hidden relative">
-          <div className="absolute inset-0 bg-gradient-to-tr from-gray-50 to-gray-100"></div>
-          <span className="relative z-10 text-gray-400 font-medium flex items-center gap-2">
-            [Visual / Foto Desa Placeholder]
-          </span>
+        <div className="w-full max-w-5xl aspect-video bg-white rounded-[2rem] border border-gray-200 shadow-2xl shadow-gray-200/50 flex items-center justify-center overflow-hidden relative">
+          <img src={balaiDesaImg} alt="Balai Desa Pulau Lancang" className="w-full h-full object-cover" />
         </div>
       </section>
 
@@ -133,7 +131,7 @@ const Profil = () => {
             {/* Aparat Desa */}
             <div>
               <div className="mb-8">
-                <h2 className="text-3xl font-black text-gray-900 mb-2 tracking-tight">Struktur Aparat Desa</h2>
+                <h2 className="text-3xl font-black text-gray-900 mb-2 tracking-tight">Struktur Aparat Desa 2026</h2>
                 <p className="text-gray-500">Jajaran perangkat desa yang bertugas saat ini.</p>
               </div>
               <div className="bg-white border border-gray-200 rounded-3xl p-6 sm:p-8 shadow-sm">
@@ -156,7 +154,7 @@ const Profil = () => {
             {/* BPD */}
             <div>
               <div className="mb-8">
-                <h2 className="text-3xl font-black text-gray-900 mb-2 tracking-tight">Badan Permusyawaratan Desa</h2>
+                <h2 className="text-3xl font-black text-gray-900 mb-2 tracking-tight">Badan Permusyawaratan Desa 2026</h2>
                 <p className="text-gray-500">Anggota BPD aktif Desa Pulau Lancang.</p>
               </div>
               <div className="bg-[#FAFAFA] border border-gray-200 rounded-3xl p-6 sm:p-8 shadow-sm">
