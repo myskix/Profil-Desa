@@ -98,7 +98,7 @@ const Profil = () => {
       {/* 3 & 4 & 5. STRUKTUR PEMERINTAHAN & SEJARAH (Compact Layout) */}
       <section className="py-24 px-4 sm:px-6 lg:px-8 bg-white border-y border-gray-200">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-12">
-          
+
           {/* Sejarah Kepemimpinan (Col span 5) */}
           <div className="lg:col-span-5">
             <div className="mb-8">
@@ -127,7 +127,7 @@ const Profil = () => {
 
           {/* Aparat & BPD (Col span 7) */}
           <div className="lg:col-span-7 space-y-12">
-            
+
             {/* Aparat Desa */}
             <div>
               <div className="mb-8">
@@ -244,7 +244,7 @@ const Profil = () => {
       </section>
 
       {/* 7. VISI & MISI (Placeholder) */}
-      <section className="py-32 px-4 sm:px-6 lg:px-8 bg-gray-900 text-center relative overflow-hidden">
+      {/* <section className="py-32 px-4 sm:px-6 lg:px-8 bg-gray-900 text-center relative overflow-hidden">
         <div className="absolute inset-0 flex items-center justify-center opacity-5">
           <Goal size={400} className="text-white" />
         </div>
@@ -256,7 +256,7 @@ const Profil = () => {
             </p>
           </div>
         </div>
-      </section>
+      </section> */}
 
     </div>
   );
