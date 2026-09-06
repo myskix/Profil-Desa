@@ -1,7 +1,8 @@
 import React from 'react';
-import { ArrowRight, Map, Info, Compass, TreePine, MapPin } from 'lucide-react';
+import { ArrowRight, Map, Info } from 'lucide-react';
 import Button from '../components/Button';
 import { useNavigate } from 'react-router-dom';
+import balaiDesaImg from '../assets/bala-desa.webp';
 
 const Home = () => {
   const navigate = useNavigate();
@@ -10,35 +11,35 @@ const Home = () => {
     <div className="min-h-screen bg-[#FAFAFA] font-sans selection:bg-accent selection:text-black overflow-hidden">
 
       {/* 1. HERO SECTION */}
-      <section className="relative pt-36 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto flex flex-col items-center text-center">
-        {/* Background Decorative Blobs */}
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-yellow-400/10 blur-[100px] rounded-full pointer-events-none -z-10"></div>
-
-        {/* <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-gray-200 shadow-sm mb-8 animate-fade-in-up">
-          <span className="w-2 h-2 rounded-full bg-accent animate-pulse"></span>
-          <span className="text-sm font-semibold text-gray-800 tracking-wide uppercase">Profil Digital Desa</span>
-        </div> */}
-
-        <h1 className="text-4xl md:text-6xl font-black text-gray-900 mb-6 tracking-tighter leading-[1.1] max-w-5xl">
-          Eksplorasi Pesona <br className="hidden md:block" />
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-900 to-gray-600">Pulau Lancang</span>
-        </h1>
-
-        <p className="text-lg md:text-xl text-gray-500 mb-10 max-w-3xl font-medium leading-relaxed">
-          Mengenal sejarah pemekaran Kenegerian Simandolak, ragam budaya lokal, dan potensi alam yang menggerakkan ekonomi masyarakat.
-        </p>
-
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-24 relative z-10">
-          <Button variant="accent" onClick={() => navigate('/profil')} className="text-lg px-10 py-4 w-full sm:w-auto shadow-yellow-400/20">
-            Mulai Jelajah
-          </Button>
-          <Button variant="outline" onClick={() => navigate('/budaya')} className="text-lg px-10 py-4 w-full sm:w-auto flex items-center justify-center gap-2">
-            <Map size={20} />
-            Peta Budaya
-          </Button>
+      <section className="relative pt-40 pb-32 px-4 sm:px-6 lg:px-8 w-full flex flex-col items-center text-center overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0">
+          <img src={balaiDesaImg} alt="Balai Desa" className="w-full h-full object-cover" />
+          <div className="absolute inset-0 bg-white/80 backdrop-blur-sm"></div>
+          {/* Decorative Blob */}
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-yellow-400/20 blur-[100px] rounded-full pointer-events-none"></div>
         </div>
 
-        {/* Hero Visual Mockup */}
+        <div className="relative z-10 max-w-7xl mx-auto flex flex-col items-center">
+          <h1 className="text-4xl md:text-6xl font-black text-gray-900 mb-6 tracking-tighter leading-[1.1] max-w-5xl">
+            Eksplorasi Pesona <br className="hidden md:block" />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-900 to-gray-600">Pulau Lancang</span>
+          </h1>
+
+          <p className="text-lg md:text-xl text-gray-700 mb-10 max-w-3xl font-medium leading-relaxed">
+            Mengenal sejarah pemekaran Kenegerian Simandolak, ragam budaya lokal, dan potensi alam yang menggerakkan ekonomi masyarakat.
+          </p>
+
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8 relative z-10">
+            <Button variant="accent" onClick={() => navigate('/profil')} className="text-lg px-10 py-4 w-full sm:w-auto shadow-yellow-400/20">
+              Mulai Jelajah
+            </Button>
+            <Button variant="outline" onClick={() => navigate('/budaya')} className="text-lg px-10 py-4 w-full sm:w-auto flex items-center justify-center gap-2 bg-white/50 backdrop-blur border-gray-300">
+              <Map size={20} />
+              Peta Budaya
+            </Button>
+          </div>
+        </div>
       </section>
 
       {/* 2. DARK STATS SECTION (Referencing the black 70% | 3-6x | 50% section) */}

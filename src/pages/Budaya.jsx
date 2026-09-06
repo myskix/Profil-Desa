@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
-import { Map, ZoomIn, X, BookOpen, Music, Waves, ImageIcon } from 'lucide-react';
+import React from 'react';
+import { Map, BookOpen, Music, Waves, ImageIcon } from 'lucide-react';
 import Button from '../components/Button';
+import pacuImg from '../assets/budaya/pacu.webp';
 
 const Budaya = () => {
-  const [isFullscreen, setIsFullscreen] = useState(false);
 
   return (
     <div className="min-h-screen bg-[#FAFAFA] font-sans selection:bg-accent selection:text-black">
@@ -23,29 +23,22 @@ const Budaya = () => {
       <section className="pb-32 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto" id="peta">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-black text-gray-900 mb-4 tracking-tight">Peta Budaya</h2>
-          <p className="text-gray-500">Visualisasi tata letak geografis dan titik budaya (ArcGIS).</p>
+          <p className="text-gray-500">Visualisasi tata letak geografis dan titik budaya.</p>
         </div>
 
         <div className="bg-white p-4 md:p-8 rounded-[2rem] border border-gray-200 shadow-xl shadow-gray-200/40">
-          <div className="relative group rounded-2xl overflow-hidden border border-gray-100 bg-gray-50 aspect-video flex items-center justify-center">
-            {/* Placeholder Image Map */}
-            <div className="absolute inset-0 bg-gradient-to-br from-gray-100 to-gray-200 flex flex-col items-center justify-center text-gray-400">
-              <Map size={64} className="mb-4 opacity-50" />
-              <p className="font-medium text-lg text-center">[ Gambar Statis Peta Budaya ArcGIS ]</p>
-              <p className="text-sm text-center px-4">Menunggu proses pemetaan selesai.</p>
-            </div>
-            {/* Zoom Button Overlay */}
-            <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors flex items-center justify-center opacity-0 group-hover:opacity-100">
-              <Button variant="primary" onClick={() => setIsFullscreen(true)} className="flex items-center gap-2">
-                <ZoomIn size={18} /> Perbesar
-              </Button>
-            </div>
+          <div className="relative rounded-2xl overflow-hidden border border-gray-100 bg-gray-50 h-[400px] md:h-[600px] flex items-center justify-center">
+            <iframe
+              src="/budaya/peta.pdf#toolbar=0&navpanes=0&scrollbar=0&view=FitH"
+              className="w-full h-full border-none"
+              title="Peta Budaya"
+            />
           </div>
         </div>
       </section>
 
       {/* 3. TRADISI & ADAT (Editorial) */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-white border-y border-gray-200" id="tradisi">
+      {/* <section className="py-24 px-4 sm:px-6 lg:px-8 bg-white border-y border-gray-200" id="tradisi">
         <div className="max-w-4xl mx-auto">
           <div className="flex items-center gap-4 mb-8">
             <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center shrink-0">
@@ -71,7 +64,7 @@ const Budaya = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* 4. KESENIAN LOKAL (Light Grid) */}
       {/* <section className="py-24 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto" id="kesenian">
@@ -112,41 +105,22 @@ const Budaya = () => {
             Tradisi Ikonik Kebanggaan Kuantan Singingi
           </p>
 
-          <div className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-[2rem] p-8 md:p-12 text-left">
+          <div className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-[2rem] p-4 sm:p-8 md:p-12 text-left shadow-2xl shadow-black/50">
+            
+            <div className="mb-8 rounded-2xl overflow-hidden border border-gray-700 aspect-video md:aspect-[21/9]">
+              <img src={pacuImg} alt="Pacu Jalur Tuah Rajo Bintang Nagori" className="w-full h-full object-cover" />
+            </div>
+
             <p className="text-gray-300 leading-relaxed mb-6">
               Dalam kebudayaan Kuantan Singingi, Pacu Jalur memegang peranan penting sebagai perekat tali silaturahmi antar warga desa. Setiap prosesnya melibatkan seluruh lapisan masyarakat tanpa memandang status sosial.
             </p>
-            <p className="text-gray-300 leading-relaxed mb-8">
-              Desa Pulau Lancang, yang dilewati oleh aliran Sungai Kuantan di sebelah utara (berbatasan dengan Tanjung Simandolak), secara geografis memiliki keterikatan batin dan sejarah yang kuat dengan tradisi perairan ini.
+            <p className="text-gray-300 leading-relaxed mb-0">
+              Desa Pulau Lancang, yang dilewati oleh aliran Sungai Kuantan di sebelah utara (berbatasan dengan Tanjung Simandolak), secara geografis memiliki keterikatan batin dan sejarah yang kuat dengan tradisi perairan ini. Desa ini memiliki jalur kebanggaan yang bernama <strong className="text-accent">TUAH RAJO BINTANG NAGORI</strong>.
             </p>
-            <div className="bg-gray-900/80 rounded-xl p-6 border border-gray-700 text-center">
-              <p className="text-gray-500 italic text-sm m-0">
-                [ Informasi mendetail mengenai nama jalur kebanggaan desa belum tersedia di dalam dokumen referensi. Data sedang dikumpulkan. ]
-              </p>
-            </div>
+
           </div>
         </div>
       </section>
-
-      {/* FULLSCREEN MAP MODAL */}
-      {isFullscreen && (
-        <div className="fixed inset-0 z-[100] bg-white/95 backdrop-blur-xl flex flex-col animate-fade-in-up">
-          <div className="flex justify-between items-center p-6 border-b border-gray-100">
-            <h3 className="font-bold text-gray-900 text-lg">Tampilan Penuh - Peta Budaya</h3>
-            <button
-              onClick={() => setIsFullscreen(false)}
-              className="p-3 bg-gray-100 rounded-full hover:bg-gray-200 transition-colors text-gray-900"
-            >
-              <X size={24} />
-            </button>
-          </div>
-          <div className="flex-1 flex items-center justify-center p-4 md:p-12 overflow-auto bg-gray-50">
-            <div className="w-full max-w-7xl aspect-[4/3] bg-gradient-to-br from-gray-200 to-gray-300 rounded-2xl shadow-inner flex items-center justify-center border border-gray-300">
-              <span className="text-gray-500 font-bold text-xl md:text-3xl">[ Resolusi Tinggi Peta ArcGIS ]</span>
-            </div>
-          </div>
-        </div>
-      )}
 
     </div>
   );

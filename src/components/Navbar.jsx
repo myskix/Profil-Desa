@@ -23,7 +23,8 @@ const Navbar = () => {
         <div className="px-6 md:px-8">
           <div className="flex justify-between items-center h-12">
             <div className="flex items-center">
-              <Link to="/" className="text-xl font-bold text-gray-900 tracking-tight flex items-center gap-2">
+              <Link to="/" className="text-xl font-bold text-gray-900 tracking-tight flex items-center gap-3">
+                <img src="/logo-kuansing.webp" alt="Logo Kuansing" className="w-8 h-8 object-contain" />
                 Pulau Lancang
               </Link>
             </div>

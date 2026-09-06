@@ -1,7 +1,8 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Sprout, Bird, Store, Users, Leaf, ArrowRight } from 'lucide-react';
+import { Sprout, Bird, Store, Users, ArrowRight } from 'lucide-react';
 import Button from '../components/Button';
+import pertanianImg from '../assets/potensi/pertanian.webp';
 
 const Potensi = () => {
   const navigate = useNavigate();
@@ -26,10 +27,8 @@ const Potensi = () => {
         {/* A. Pertanian & Perkebunan */}
         <div className="flex flex-col md:flex-row items-center gap-12 lg:gap-20">
           <div className="w-full md:w-1/2 order-2 md:order-1">
-            <div className="aspect-[4/3] bg-gray-100 rounded-[2rem] border border-gray-200 flex flex-col items-center justify-center text-gray-400 relative overflow-hidden shadow-xl shadow-gray-200/50">
-              <Leaf size={48} className="mb-4 opacity-30" />
-              <p className="font-medium">[ Visual Lahan Pertanian ]</p>
-              <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-green-500/10 rounded-full blur-3xl"></div>
+            <div className="aspect-[4/3] bg-gray-100 rounded-[2rem] border border-gray-200 flex items-center justify-center relative overflow-hidden shadow-xl shadow-gray-200/50">
+              <img src={pertanianImg} alt="Pertanian dan Perkebunan Desa" className="w-full h-full object-cover" />
             </div>
           </div>
           <div className="w-full md:w-1/2 order-1 md:order-2">
