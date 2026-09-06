@@ -41,30 +41,6 @@ const Kontak = () => {
                 </div>
               </div>
 
-              <div className="flex gap-5">
-                <div className="w-12 h-12 bg-gray-50 rounded-full flex items-center justify-center shrink-0 border border-gray-100 text-gray-900">
-                  <Phone size={24} />
-                </div>
-                <div>
-                  <h3 className="font-bold text-gray-900 text-lg mb-1">Telepon</h3>
-                  <p className="text-gray-600 leading-relaxed">
-                    [ 08xx-xxxx-xxxx ]
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex gap-5">
-                <div className="w-12 h-12 bg-gray-50 rounded-full flex items-center justify-center shrink-0 border border-gray-100 text-gray-900">
-                  <Mail size={24} />
-                </div>
-                <div>
-                  <h3 className="font-bold text-gray-900 text-lg mb-1">Email</h3>
-                  <p className="text-gray-600 leading-relaxed">
-                    [ admin@pulaulancang.desa.id ]
-                  </p>
-                </div>
-              </div>
-
             </div>
           </div>
 
